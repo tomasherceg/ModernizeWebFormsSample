@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernizeWebFormsSample.Auth.Old", "ModernizeWebFormsSample.Auth.Old\ModernizeWebFormsSample.Auth.Old.csproj", "{5764B260-A16C-4CA9-8326-E315486693A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernizeWebFormsSample.Auth.New", "ModernizeWebFormsSample.Auth.New\ModernizeWebFormsSample.Auth.New.csproj", "{D3A2519C-F617-43D2-A5F5-7415F49AAD0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5764B260-A16C-4CA9-8326-E315486693A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5764B260-A16C-4CA9-8326-E315486693A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5764B260-A16C-4CA9-8326-E315486693A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3A2519C-F617-43D2-A5F5-7415F49AAD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A2519C-F617-43D2-A5F5-7415F49AAD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A2519C-F617-43D2-A5F5-7415F49AAD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A2519C-F617-43D2-A5F5-7415F49AAD0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

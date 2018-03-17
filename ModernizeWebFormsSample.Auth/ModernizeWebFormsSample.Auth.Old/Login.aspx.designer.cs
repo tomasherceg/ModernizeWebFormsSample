@@ -13,48 +13,12 @@ namespace ModernizeWebFormsSample.Auth.Old {
     public partial class Login {
         
         /// <summary>
-        /// Alert control.
+        /// Login1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Alert;
-        
-        /// <summary>
-        /// EmailTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
-        
-        /// <summary>
-        /// PasswordTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
-        
-        /// <summary>
-        /// RememberMeCheckBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox RememberMeCheckBox;
-        
-        /// <summary>
-        /// LoginButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginButton;
+        protected global::System.Web.UI.WebControls.Login Login1;
     }
 }

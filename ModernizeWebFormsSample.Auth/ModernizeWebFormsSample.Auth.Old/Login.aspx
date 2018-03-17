@@ -4,35 +4,45 @@
     
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-    
-            <div class="alert alert-danger" ID="Alert" runat="server" Visible="false">
-                Invalid e-mail address or password!
-            </div>
 
-            <div class="form">
-                <div class="form-group">
-                    <label class="control-label">E-mail Address</label>
-                    <div>
-                        <asp:TextBox ID="EmailTextBox" runat="server" CssClass="form-control" />
+            <asp:Login ID="Login1" runat="server" DestinationPageUrl="~/">
+                <LayoutTemplate>
+                    
+                    <div class="form">
+                        <div class="form-group">
+                            <asp:Label runat="server" AssociatedControlID="UserName" ID="UserNameLabel" CssClass="control-label">User Name</asp:Label>
+                            <div>
+                                <asp:TextBox runat="server" ID="UserName" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." 
+                                                            ValidationGroup="Login1" ToolTip="User Name is required." ID="UserNameRequired">*</asp:RequiredFieldValidator>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label runat="server" AssociatedControlID="Password" ID="PasswordLabel">Password</asp:Label>
+                            <div>
+                                <asp:TextBox runat="server" TextMode="Password" ID="Password" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" ErrorMessage="Password is required." 
+                                                            ValidationGroup="Login1" ToolTip="Password is required." ID="PasswordRequired">*</asp:RequiredFieldValidator>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label"></label>
+                            <div class="checkbox-inline">
+                                <asp:CheckBox runat="server" Text="Remember me next time." ID="RememberMe"></asp:CheckBox>
+                            </div>
+                        </div>
+                        <div class="form-group text-danger">
+                            <asp:Literal runat="server" ID="FailureText" EnableViewState="False"></asp:Literal>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label">Password</label>
-                    <div>
-                        <asp:TextBox ID="PasswordTextBox" runat="server" CssClass="form-control" TextMode="Password" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label"></label>
-                    <div class="checkbox-inline">
-                        <asp:CheckBox ID="RememberMeCheckBox" runat="server" Text="Remember Me" />
-                    </div>
-                </div>
-            </div>
             
-            <div class="text-right">
-                <asp:Button ID="LoginButton" runat="server" UseSubmitBehavior="true" Text="Sign In" OnClick="LoginButton_OnClick" CssClass="btn btn-primary" />
-            </div>
+                    <div class="text-right">
+                        <asp:Button runat="server" CommandName="Login" Text="Sign In" ValidationGroup="Login1" 
+                                    ID="LoginButton" Class="btn btn-primary" UseSubmitBehavior="true"></asp:Button>
+                    </div>
+
+                </LayoutTemplate>
+            </asp:Login>
 
         </div>
     </div>

@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ModernizeWebFormsSample.Auth.Old.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/jquery-1.9.1.min.js" />
+                <asp:ScriptReference Path="~/Scripts/bootstrap.min.js" />
+            </Scripts>
+        </asp:ScriptManager>
+        
+        <div class="container">
+            
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-menu" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Demo</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-menu">
+                        <ul class="nav navbar-nav">
+                            <li><a href="~/" runat="server">Home</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li id="MenuSignInLink" runat="server">
+                                <a href="~/Login.aspx" runat="server">Sign In</a>
+                            </li>
+                            <li id="MenuMyProfileLink" runat="server">
+                                <a href="~/User/Profile.aspx" runat="server">My Profile</a>
+                            </li>
+                            <li id="MenuSignOutLink" runat="server">
+                                <asp:LoginStatus runat="server" LogoutText="Log Out" LogoutAction="Redirect" LogoutPageUrl="~/"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="page-header">
+                <h1>Modernizing ASP.NET Web Forms Apps <small>Replacing Forms Authentication</small></h1>
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
